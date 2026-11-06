@@ -3,323 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LGS Atasözleri & Deyimler — Gizlilik Politikası & Kullanım Koşulları</title>
-  <meta name="description" content="LGS Atasözleri & Deyimler uygulamasının Gizlilik Politikası ve Kullanım Koşulları. BitSize Games.">
+  <title>LGS Atasözleri &amp; Deyimler — Gizlilik Politikası ve Kullanım Koşulları</title>
+  <meta name="description" content="LGS Atasözleri &amp; Deyimler uygulamasının Gizlilik Politikası, Kullanım Koşulları ve Yasal Bildirimi. Bitsize Games.">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --bg: #0f172a;
-      --card: #1e293b;
-      --border: rgba(255,255,255,0.08);
-      --accent: #f59e0b;
-      --text: #94a3b8;
-      --text-light: #64748b;
-      --heading: #fff;
-      --green: #22c55e;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      line-height: 1.75;
-      font-size: 14px;
-      padding: 0;
-    }
-
-    .site-header {
-      background: rgba(15,23,42,0.95);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
-    .header-inner {
-      max-width: 640px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .header-title { font-size: 15px; font-weight: 700; color: var(--heading); }
-    .header-dev { font-size: 11px; color: var(--text-light); }
-
-    .tab-nav {
-      max-width: 640px;
-      margin: 24px auto 0;
-      padding: 0 20px;
-      display: flex;
-      gap: 8px;
-    }
-
-    .tab-btn {
-      flex: 1;
-      padding: 12px 16px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: transparent;
-      color: var(--text);
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-align: center;
-    }
-
-    .tab-btn:hover { background: rgba(255,255,255,0.04); }
-
-    .tab-btn.active {
-      background: rgba(245,158,11,0.12);
-      color: var(--accent);
-      border-color: rgba(245,158,11,0.3);
-    }
-
-    .content {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 20px 20px 80px;
-    }
-
+    :root { --bg: #f6f7fb; --card: #ffffff; --text: #334155; --muted: #64748b; --heading: #0f172a; --line: #e2e8f0; --accent: #4f46e5; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0f172a; --card: #1e293b; --text: #cbd5e1; --muted: #94a3b8; --heading: #f1f5f9; --line: #334155; --accent: #818cf8; } }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .site-header { background: var(--card); border-bottom: 1px solid var(--line); padding: 14px 16px; }
+    .header-inner, .content, .tab-nav { max-width: 760px; margin: 0 auto; }
+    .header-title { font-size: 16px; font-weight: 700; color: var(--heading); }
+    .header-dev { font-size: 12px; color: var(--muted); }
+    .tab-nav { display: flex; gap: 8px; padding: 16px 16px 0; flex-wrap: wrap; }
+    .tab-btn { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 999px; padding: 8px 14px; font-size: 14px; cursor: pointer; }
+    .tab-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .content { padding: 16px; }
     .section { display: none; }
     .section.active { display: block; }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px;
-      margin-bottom: 16px;
-    }
-
-    .update-date { font-size: 11px; color: var(--text-light); margin-bottom: 16px; }
-
-    .intro { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 20px; }
-    .intro strong { color: var(--heading); }
-
-    h2 {
-      font-size: 16px; font-weight: 700; color: var(--heading);
-      margin: 28px 0 10px; padding-bottom: 6px;
-      border-bottom: 1px solid var(--border);
-    }
-    h2:first-of-type { margin-top: 8px; }
-
-    h3 { font-size: 14px; font-weight: 600; color: var(--accent); margin: 18px 0 8px; }
-
-    p { font-size: 13px; color: var(--text); line-height: 1.75; margin: 0 0 10px; }
-    p strong { color: var(--heading); }
-    .green { color: var(--green); }
-    .accent { color: var(--accent); }
-
-    ul { list-style: none; padding: 0; margin: 0 0 12px; }
-
-    ul li {
-      font-size: 13px; color: var(--text); line-height: 1.75;
-      padding-left: 16px; position: relative; margin-bottom: 2px;
-    }
-
-    ul li::before {
-      content: "\2022"; position: absolute; left: 0;
-      color: var(--accent); font-weight: 700;
-    }
-
-    ul li strong { color: var(--heading); }
-
-    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
-    a:hover { opacity: 0.8; }
-
-    .site-footer {
-      max-width: 640px; margin: 0 auto; padding: 20px;
-      text-align: center; font-size: 11px; color: var(--text-light);
-      line-height: 1.6; border-top: 1px solid var(--border);
-    }
-    .site-footer a { font-size: 11px; }
-
-    @media (max-width: 480px) {
-      .card { padding: 18px 16px; }
-      .tab-btn { font-size: 12px; padding: 10px 12px; }
-    }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+    .update-date { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+    h1 { font-size: 20px; color: var(--heading); margin-bottom: 8px; }
+    h2 { font-size: 16px; color: var(--heading); margin: 20px 0 8px; }
+    p { margin-bottom: 10px; font-size: 15px; }
+    ul { margin: 0 0 10px 20px; font-size: 15px; }
+    li { margin-bottom: 4px; }
+    strong { color: var(--heading); }
+    a { color: var(--accent); }
+    .site-footer { max-width: 760px; margin: 0 auto; padding: 8px 16px 32px; font-size: 12px; color: var(--muted); text-align: center; }
   </style>
 </head>
 <body>
-
   <header class="site-header">
     <div class="header-inner">
-      <div>
-        <div class="header-title">📚 LGS Atasözleri & Deyimler</div>
-        <div class="header-dev">BitSize Games</div>
-      </div>
+      <div class="header-title">LGS Atasözleri &amp; Deyimler</div>
+      <div class="header-dev">Bitsize Games</div>
     </div>
   </header>
 
   <nav class="tab-nav">
-    <button class="tab-btn active" onclick="showTab('privacy')">🔒 Gizlilik Politikası</button>
-    <button class="tab-btn" onclick="showTab('terms')">📄 Kullanım Koşulları</button>
+    <button class="tab-btn active" data-tab="privacy">Gizlilik Politikası</button>
+    <button class="tab-btn" data-tab="terms">Kullanım Koşulları</button>
+    <button class="tab-btn" data-tab="notice">Yasal Bildirim</button>
   </nav>
 
   <div class="content">
-
     <div id="privacy" class="section active">
       <div class="card">
-        <div class="update-date">Son güncelleme: 2025-07-01</div>
-
-        <p class="intro">
-          <strong>BitSize Games</strong> olarak, <strong>LGS Atasözleri &amp; Deyimler</strong>
-          uygulamasını kullanan herkesin — özellikle çocukların — gizliliğini ciddiye alıyoruz.
-          Bu politika, uygulamanın hangi verileri topladığını, nasıl kullandığını ve haklarınızı açıklar.
-        </p>
-
-        <h2>1. Toplanan Veriler</h2>
-
-        <h3>1a. Toplamadığımız Veriler</h3>
-        <p>Bu uygulama aşağıdaki bilgileri <strong class="green">toplamaz, saklamaz veya iletmez</strong>:</p>
+        <h1>Gizlilik Politikası</h1>
+        <div class="update-date">Son güncelleme: Kasım 2026</div>
+        <p>Bitsize Games olarak <strong>LGS Atasözleri &amp; Deyimler</strong> uygulamasını kullanan herkesin, özellikle de öğrencilerimizin gizliliğini önemsiyoruz. Bu metin, uygulamanın hangi bilgileri nerede tuttuğunu ve neleri asla toplamadığını açıklar.</p>
+        <h2>1. Toplamadığımız bilgiler</h2>
+        <p>Uygulama aşağıdakileri toplamaz, saklamaz ve hiçbir yere göndermez:</p>
         <ul>
-          <li>Ad, soyad, kullanıcı adı</li>
-          <li>E-posta adresi, telefon numarası</li>
-          <li>Konum bilgisi (GPS, IP tabanlı konum)</li>
-          <li>Kişi listesi, fotoğraflar, dosyalar</li>
-          <li>Cihaz kimliği veya reklam kimliği (kullanıcıya ait)</li>
-          <li>Çocuklardan herhangi bir kişisel bilgi</li>
+        <li>Ad, soyad, e-posta, telefon numarası</li>
+        <li>Konum bilgisi</li>
+        <li>Kişi listesi, fotoğraf ve dosyalar</li>
+        <li>Reklam kimliği ya da cihaz kimliği</li>
+        <li>Hesap bilgisi (uygulamada hesap ya da giriş yoktur)</li>
         </ul>
-
-        <h3>1b. Cihazda Yerel Olarak Saklanan Veriler</h3>
-        <p>Aşağıdaki veriler <strong>yalnızca kullanıcının cihazında</strong> (AsyncStorage / localStorage) saklanır ve hiçbir sunucuya gönderilmez:</p>
+        <h2>2. Yalnız cihazında tutulanlar</h2>
+        <p>Aşağıdaki bilgiler <strong>yalnız senin cihazında</strong> saklanır, hiçbir sunucuya gönderilmez:</p>
         <ul>
-          <li>Oyun performans istatistikleri (doğru/yanlış sayıları)</li>
-          <li>Yaş onayı ve reklam bilgilendirme onay durumu</li>
+        <li>Çalışma istatistiklerin (doğru/yanlış sayıları, günlük seri, rozetler)</li>
+        <li>Akıllı tekrar için her maddenin öğrenme durumu</li>
+        <li>Yaş onayı ve uygulama ayarların (tema vb.)</li>
         </ul>
-        <p>Bu veriler yalnızca uygulamanın işlevsel liği için kullanılır. Kullanıcı istediği zaman uygulama verilerini silerek bu bilgileri temizleyebilir.</p>
-
-        <h2>2. Reklamlar</h2>
-        <p>Uygulama, <strong>Google AdMob</strong> tarafından sağlanan <strong class="accent">kişiselleştirilmemiş reklamlar</strong> gösterir.</p>
+        <p>Uygulamayı silersen bu bilgiler de silinir. Ayarlar ekranından istediğin an sıfırlayabilirsin.</p>
+        <h2>3. Karne paylaşımı</h2>
+        <p>Performans ekranındaki "karne paylaş" özelliği, karneyi senin cihazında PDF ya da görsel olarak oluşturur ve telefonun paylaşım menüsünü açar. Karnenin kime gideceğini <strong>yalnız sen seçersin</strong>. Karneye yazdığın ad kaydedilmez.</p>
+        <h2>4. Hatırlatmalar ve satın alma</h2>
         <ul>
-          <li>Reklamlar kullanıcı profiline dayalı <strong>değildir</strong></li>
-          <li>Yalnızca genel izleyiciye uygun (G-rated) içerikler gösterilir</li>
-          <li>Bahis, alkol, tütün ve yetişkin içerikleri engellenmiştir</li>
-          <li>Uygulama COPPA uyumlu "child-directed" olarak yapılandırılmıştır</li>
+        <li>Çalışma hatırlatmaları yalnız sen Ayarlar'dan açarsan, telefonunda yerel olarak planlanır; hiçbir sunucu kullanılmaz.</li>
+        <li>Reklamsız sürüm satın alımı tamamen Google Play / App Store üzerinden yapılır. Ödeme bilgilerini uygulama görmez ve saklamaz; yalnız "satın alındı" bilgisi cihazında tutulur.</li>
         </ul>
-        <p>Google'ın reklam gizlilik politikası hakkında daha fazla bilgi için:
-          <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a>
-        </p>
-
-        <h2>3. Çocukların Gizliliği (COPPA &amp; KVKK)</h2>
-        <p>Bu uygulama ABD Çocukların Çevrimiçi Gizliliğini Koruma Yasası (COPPA)
-          ve Türkiye Kişisel Verilerin Korunması Kanunu'na (KVKK) uygun olarak tasarlanmıştır.</p>
+        <h2>5. Reklamlar</h2>
+        <p>Uygulama, Google AdMob aracılığıyla <strong>kişiselleştirilmemiş</strong> tam ekran reklamlar gösterir:</p>
         <ul>
-          <li>13 yaş altı kullanıcılar uygulama yı kullanamazlar (yaş kapısı)</li>
-          <li>Çocuklardan hiçbir kişisel bilgi toplanmaz</li>
-          <li>Reklam SDK'sı child-directed modda çalışır</li>
-          <li>Kullanıcı izleme (tracking) devre dışıdır</li>
+        <li>Reklamlar seni tanıyarak seçilmez, profil oluşturulmaz</li>
+        <li>Yalnız genel izleyiciye uygun (G) içerikler gösterilir; bahis, alkol, tütün ve yetişkin içerikleri engellenmiştir</li>
+        <li>Reklam ayarları çocuklara yönelik hizmet kurallarına göre yapılandırılmıştır</li>
+        <li>Bir oturumda en fazla iki reklam gösterilir ve soru çözerken asla reklam çıkmaz</li>
         </ul>
-
-        <h2>4. Üçüncü Taraf Hizmetleri</h2>
-        <p>Uygulama aşağıdaki üçüncü taraf hizmetlerini kullanır:</p>
-        <ul>
-          <li><strong>Google AdMob</strong> — Reklam gösterimi (kişiselleştirilmemiş, child-directed mod)</li>
-        </ul>
-        <p>Bunun dışında hiçbir analitik, crash reporting, push notification veya bulut hizmeti kullanılmamaktadır.</p>
-
-        <h2>5. Veri Güvenliği</h2>
-        <p>Kişisel veri toplama dığımız için aktif bir veri güvenliği riski bulunmamaktadır.
-          Cihazda saklanan performans verileri, cihazın kendi güvenlik mekanizmaları tarafından korunur.</p>
-
-        <h2>6. Kullanıcı Hakları</h2>
-        <p>Kullanıcılar şu haklara sahiptir:</p>
-        <ul>
-          <li>Uygulama verilerini cihazdan silme hakkı</li>
-          <li>Uygulama izinleri hakkında bilgi alma hakkı</li>
-          <li>Gizlilik politikası hakkında soru sorma hakkı</li>
-        </ul>
-
-        <h2>7. Değişiklikler</h2>
-        <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama güncellemesi ile duyurulacaktır.</p>
-
-        <h2>8. İletişim</h2>
-        <p>Gizlilik politikası hakkında sorularınız için: <a href="mailto:bitsizegames@outlook.com"><strong>bitsizegames@outlook.com</strong></a></p>
-        <p>Geliştirici: BitSize Games</p>
+        <p>Google'ın reklam politikası: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></p>
+        <h2>6. Çocukların gizliliği</h2>
+        <p>Uygulama 13 yaş ve üzeri öğrenciler içindir ve KVKK ile COPPA ilkelerine uygun tasarlanmıştır. Kimseden kişisel bilgi istenmez.</p>
+        <h2>7. Üçüncü taraf hizmetler</h2>
+        <p>Reklam için Google AdMob, satın alma için Google Play / App Store dışında hiçbir analitik, takip ya da bulut hizmeti kullanılmaz.</p>
+        <h2>8. Hakların ve iletişim</h2>
+        <p>Verilerin zaten yalnız cihazında olduğu için onları her an silebilirsin. Soruların için: <strong><a href="mailto:bitsizegames@outlook.com">bitsizegames@outlook.com</a></strong></p>
       </div>
     </div>
 
     <div id="terms" class="section">
       <div class="card">
-        <div class="update-date">Son güncelleme: 2025-07-01</div>
-
-        <p class="intro">
-          <strong>LGS Atasözleri &amp; Deyimler</strong> uygulamasını kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız.
-        </p>
-
-        <h2>1. Uygulamanın Amacı</h2>
-        <p>Bu uygulama, LGS (Liseye Geçiş Sınavı) hazırlığı kapsamında atasözü ve deyim bilgisi geliştirmek amacıyla
-          eğitim amaçlı olarak sunulmaktadır. Profesyonel eğitim danışmanlığının yerine geçmez.</p>
-
-        <h2>2. Yaş Sınırı</h2>
-        <p>Uygulama yı kullanmak için <strong>13 yaşında veya daha büyük</strong> olmanız gerekmektedir.
-          13 yaş altı kullanıcılar uygulama yı kullanamazlar.</p>
-
-        <h2>3. İçerik ve Doğruluk</h2>
-        <p>Uygulama içerikleri atasözleri sözlükleri, deyimler sözlükleri, popüler kullanılan atasözü ve deyimler ile
-          2018–2025 LGS sınav soruları kullanılarak oluşturulmuştur.</p>
-        <p>BitSize Games, içeriklerin doğruluğu, eksiksizliği veya gücelliği konusunda hiçbir garanti vermemekte olup,
-          uygulamanın kullanımından doğabilecek doğrudan veya dolaylı zararlardan yasal sorumluluk kabul etmemektedir.</p>
-
-        <h2>4. Reklamlar</h2>
-        <p>Uygulama, Google AdMob aracılığıyla kişiselleştirilmemiş reklamlar gösterir.
-          Reklamlar çocuklara uygun içerik politikasına tabidir. Reklamların içeriğinden BitSize Games sorumlu değildir.</p>
-
-        <h2>5. Fikri Mülkiyet</h2>
-        <p>Uygulama tasarımı, kodu ve özgün içerikleri BitSize Games'a aittir.
-          Atasözleri ve deyimler Türk kültürel mirası olup, herhangi bir telif hakkı iddiası taşımamaktadır.
-          LGS sınav soruları kamuya açık kaynaklardan alınmıştır.</p>
-
-        <h2>6. Kullanım Kısıtlamaları</h2>
-        <p>Kullanıcılar aşağıdakileri yapmayı kabul etmez:</p>
+        <h1>Kullanım Koşulları</h1>
+        <div class="update-date">Son güncelleme: Kasım 2026</div>
+        <p><strong>LGS Atasözleri &amp; Deyimler</strong> uygulamasını kullanarak aşağıdaki koşulları kabul etmiş olursun.</p>
+        <h2>1. Amaç</h2>
+        <p>Uygulama, LGS'ye hazırlanan öğrencilerin atasözü ve deyim bilgisini geliştirmesi için hazırlanmış bir çalışma aracıdır. Resmî bir MEB yayını değildir.</p>
+        <h2>2. İçerik</h2>
+        <p>Anlamlar atasözü ve deyim sözlükleri ile geçmiş LGS soruları esas alınarak hazırlanmıştır. Paragraf sorularındaki metinler, parantez içinde yazarı ve eseri belirtilen kitaplardan alınmıştır. İçerikte bir hata görürsen soru ekranındaki bayrak simgesiyle bize bildirebilirsin.</p>
+        <h2>3. Sorumluluk</h2>
+        <p>İçeriği özenle hazırlıyoruz ancak eksiksiz ya da hatasız olduğunu garanti edemeyiz. Uygulama, öğretmen ve okul eğitiminin yerine geçmez; sınav sonucu üzerinde bir taahhüt vermez.</p>
+        <h2>4. Kullanım</h2>
         <ul>
-          <li>Uygulamayı tersine mühendislik veya kaynak kodu çıkarma girişimi</li>
-          <li>Reklam engelleme araçları ile uygulama gelirini manipüle etme</li>
-          <li>Uygulama içeriğini izinsiz kopyalama veya yeniden yayınlama</li>
+        <li>Uygulama kişisel, ticari olmayan çalışma için kullanılabilir</li>
+        <li>İçeriğin toplu olarak kopyalanması ya da başka bir üründe yayımlanması izinsiz yapılamaz</li>
+        <li>Uygulamanın kodunu ya da verisini çözümlemek, uygulamadan içerik çıkarmak (tersine mühendislik) ve uygulamayı değiştirerek yeniden dağıtmak yasaktır</li>
         </ul>
-
-        <h2>7. Sorumluluk Sınırı</h2>
-        <p>BitSize Games, uygulamanın kesintisiz veya hatasız çalışacağını garanti etmez.
-          Sınav sonuçları uygulamanın kullanımına bağlı olarak değişkenlik gösterebilir.
-          Uygulama "olduğu gibi" sunulmaktadır.</p>
-
-        <h2>8. Değişiklikler</h2>
-        <p>Bu kullanım koşulları zaman zaman güncellenebilir.
-          Uygulamayı kullanmaya devam etmeniz, güncellenmiş koşulları kabul ettiğiniz anlamına gelir.</p>
-
-        <h2>9. İletişim</h2>
-        <p>Sorularınız için: <a href="mailto:bitsizegames@outlook.com"><strong>bitsizegames@outlook.com</strong></a></p>
-        <p>Geliştirici: BitSize Games</p>
+        <h2>5. Fikrî haklar</h2>
+        <p>Uygulamadaki atasözü ve deyim sözlüğü, anlam açıklamaları, soru metinleri, şıklar ve bunların seçimi ile düzenlenişi üzerindeki tüm haklar saklıdır (Dr. Hakan Yurdakul / Bitsize Games). Bu bütün, 5846 sayılı Fikir ve Sanat Eserleri Kanunu kapsamında derleme eseri (madde 6) ve veri tabanı (ek madde 8) olarak korunur. Paragraf sorularındaki edebî metinlerin hakları yazarlarına ve yayıncılarına aittir; metinler kaynak gösterilerek eğitim amacıyla alıntılanmıştır.</p>
+        <h2>6. Reklamsız sürüm</h2>
+        <p>Reklamsız sürüm, sunulduğu mağazada tek seferlik bir satın almadır; yalnız reklamları kaldırır, içerik ve özellikler değişmez. Satın alma mağaza hesabına bağlıdır ve Ayarlar ekranından geri yüklenebilir. Mağazada henüz sunulmuyorsa Ayarlar'da bu bölüm görünmez.</p>
+        <h2>7. Değişiklikler</h2>
+        <p>Bu koşullar güncellenebilir; güncel metin her zaman uygulama içinde yer alır.</p>
+        <h2>8. İletişim</h2>
+        <p><strong><a href="mailto:bitsizegames@outlook.com">bitsizegames@outlook.com</a></strong></p>
       </div>
     </div>
 
+    <div id="notice" class="section">
+      <div class="card">
+        <h1>Yasal Bildirim</h1>
+        <p>LGS Atasözleri &amp; Deyimler, LGS'ye hazırlanan öğrencilere destek olmak amacıyla Bitsize Games tarafından geliştirilmiştir.</p>
+        <p>İçerikler; atasözleri ve deyimler sözlükleri, yaygın kullanılan atasözü ve deyimler, 2018–2026 LGS soruları ve klasik ile çağdaş Türk edebiyatı eserlerinden alınan paragraflar kullanılarak hazırlanmıştır. Paragrafların kaynağı her sorunun altında yazar ve eser adıyla belirtilir.</p>
+        <p><strong>© 2026 Dr. Hakan Yurdakul / Bitsize Games</strong>. Sözlük, anlam açıklamaları ve sorular telif ve veri tabanı hakkıyla korunur; izinsiz kopyalanamaz, çoğaltılamaz, başka bir üründe kullanılamaz.</p>
+        <p>Geliştirici, içeriklerin doğruluğu ve güncelliği konusunda garanti vermez; uygulamanın kullanımından doğabilecek doğrudan ya da dolaylı zararlardan sorumlu tutulamaz. Uygulama profesyonel eğitim danışmanlığının yerine geçmez.</p>
+      </div>
+    </div>
   </div>
 
   <footer class="site-footer">
-    © 2025 BitSize Games — LGS Atasözleri &amp; Deyimler<br>
+    © 2026 Dr. Hakan Yurdakul / Bitsize Games — LGS Atasözleri &amp; Deyimler<br>
     <a href="mailto:bitsizegames@outlook.com">bitsizegames@outlook.com</a>
   </footer>
 
   <script>
     function showTab(tab) {
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById(tab).classList.add('active');
-      event.target.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (!document.getElementById(tab)) tab = "privacy";
+      document.querySelectorAll(".section").forEach(function (s) { s.classList.toggle("active", s.id === tab); });
+      document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-tab") === tab); });
     }
-
-    if (window.location.hash === '#terms') showTab('terms');
+    document.querySelectorAll(".tab-btn").forEach(function (b) {
+      b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); history.replaceState(null, "", "#" + b.getAttribute("data-tab")); window.scrollTo(0, 0); });
+    });
+    // Eski bağlantılar: #terms → Kullanım Koşulları, #notice → Yasal Bildirim
+    if (location.hash) showTab(location.hash.slice(1));
   </script>
-
 </body>
 </html>
